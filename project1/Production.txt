@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+<configuration>
+  <configSections>
+    <sectionGroup name="system.web.extensions" type="System.Web.Configuration.SystemWebExtensionsSectionGroup, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35">
+      <sectionGroup name="scripting" type="System.Web.Configuration.ScriptingSectionGroup, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35">
+        <section name="scriptResourceHandler" type="System.Web.Configuration.ScriptingScriptResourceHandlerSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" allowDefinition="MachineToApplication"/>
+        <sectionGroup name="webServices" type="System.Web.Configuration.ScriptingWebServicesSectionGroup, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35">
+          <section name="jsonSerialization" type="System.Web.Configuration.ScriptingJsonSerializationSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" allowDefinition="Everywhere"/>
+          <section name="profileService" type="System.Web.Configuration.ScriptingProfileServiceSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" allowDefinition="MachineToApplication"/>
+          <section name="authenticationService" type="System.Web.Configuration.ScriptingAuthenticationServiceSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" allowDefinition="MachineToApplication"/>
+          <section name="roleService" type="System.Web.Configuration.ScriptingRoleServiceSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" allowDefinition="MachineToApplication"/>
+        </sectionGroup>
+      </sectionGroup>
+    </sectionGroup>
+    <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+      <section name="Portlets.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+    </sectionGroup>
+  </configSections>
+  <appSettings>
+    <add key="OpenStatusID" value="19"/>
+    <add key="ITSOrderAttachmentURIPath" value="https://www.myporthos.com/Support/ITS/TicketAttachments"/>
+    <add key="ITSOrderAttachmentPhysicalPath" value="\\172.16.2.170\TicketAttachments\PorthosOrders"/>
+    <add key="ITSStatusIdForOrder" value="1"/>
+    <add key="StockFilesPath" value="\\172.18.2.211\PorthosDocuments\PorthosUploadedFiles"/>
+    <add key="AwaitingCustomerResponseActionId" value="4"/>
+    <add key="EnableTracing" value="1" />
+    <add key="ApplicationPath" value="D://inetpub//API//PorthosWServicesStaging" />
+    <add key="MainTimerSpan" value="60"/>
+    <add key="AccessRightsTimerSpan" value="3600"/>
+    <add key="PageIdForControls" value="474"/>
+    <add key="ItsContactId" value="3"/>
+    <add key="ItsContactName" value="Red Alerts"/>
+    <add key="ItsContactEmail" value="red.alerts@zintechnologies.com"/>
+    <add key="LoggedInUserId" value="2899"/>
+    <add key="ItsStatusId" value="1"/>
+    <add key="ItsCategoryId" value="32"/>
+    <add key="ItsSLAId" value="25"/>
+    <add key="ItsGroupId" value="4"/>    
+    <add key="EditTicketURL" value="https://www.myporthos.com/Support/ITS/application/editticket.aspx"/>
+    <add key="sendemailnotifications" value="true"/>
+    <add key="SMTPServer" value="mail.wyless.net"/>
+    <add key="NotificationFrom" value="servicedesk@wyless.com"/>
+    <add key="NotificationFromName" value="Wyless Service Desk"/>
+    <add key="TicketRaisedSubject" value="Ticket Raised"/>
+    <add key="orderShipableSLAIdAbove99" value="27"/>
+    <add key="orderNonShipableAutomatedSLAIdAbove49" value="61"/>
+    <add key="orderNonShipableManualSLAIdAbove99" value="61"/>
+    <add key="AccessTokenVersion" value="01"/>
+    <add key="AccessTokenCompanyId" value="47"/>
+
+
+    <add key="TicketRaisedMessage" value="Dear Customer,&lt;br&gt;&lt;br&gt;
+Please accept this email as confirmation that the above ticket number has been raised in acknowledgement of your query.&lt;br&gt;
+This has now been sent to your customer management agent for action and they will be in touch with an update shortly.&lt;br&gt;
+Should you wish to update your ticket in the mean time, please click the link below:&lt;br&gt;&lt;br&gt;
+         ##TicketLink##
+&lt;br&gt;&lt;br&gt;Kind Regards&lt;br&gt;Wyless Service Desk&lt;br&gt;
++44 (0)1895 454 660&lt;br&gt;
+(617) 949-8900"/>
+    <add key="TicketUpdatedSubject" value="Ticket Updated"/>
+    <add key="TicketUpdatedMessage" value="Dear Customer,&lt;br&gt;&lt;br&gt;
+Please be advised that your above Wyless support ticket has been updated.&lt;br&gt;
+To view the update, please click the link below:&lt;br&gt;&lt;br&gt;
+         ##TicketLink##
+&lt;br&gt;&lt;br&gt;Kind Regards&lt;br&gt;Wyless Service Desk&lt;br&gt;
++44 (0)1895 454 660&lt;br&gt;
+(617) 949-8900"/>
+
+    <add key="TicketResolvedSubject" value="Resolution confirmation"/>
+    <add key="TicketResolvedMessage" value="Dear Customer,&lt;br&gt;&lt;br&gt;
+Please be advised that we believe your above query has now been resolved.&lt;br&gt;
+To view details and confirm that the issue is resolved to your satisfaction, please click the link below:&lt;br&gt;&lt;br&gt;
+         ##TicketLink##
+&lt;br&gt;&lt;br&gt;Kind Regards&lt;br&gt;Wyless Service Desk&lt;br&gt;
++44 (0)1895 454 660&lt;br&gt;
+(617) 949-8900"/>
+
+    <add key="CustomerRepliedSubject" value="Customer update"/>
+    <add key="CustomerRepliedMessage" value="&lt;br&gt;
+CUSTOMER UPDATE, the above ticket has been updated. To view the ticket, click the link below:&lt;br&gt;&lt;br&gt;
+         ##TicketLink##
+&lt;br&gt;&lt;br&gt;Kind Regards&lt;br&gt;Wyless Service Desk&lt;br&gt;
++44 (0)1895 454 660&lt;br&gt;
+(617) 949-8900"/>
+
+
+    <add key="InternalMessageSubject" value="Internal message"/>
+    <add key="InternalMessage" value="&lt;br&gt;
+Please be advised that the above Wyless support ticket has been updated.&lt;br&gt;
+To view the update, please click the link below:&lt;br&gt;&lt;br&gt;
+         ##TicketLink##
+&lt;br&gt;&lt;br&gt;Kind Regards&lt;br&gt;Wyless Service Desk&lt;br&gt;
++44 (0)1895 454 660&lt;br&gt;
+(617) 949-8900"/>
+
+  </appSettings>
+  <connectionStrings>
+    <!-- DB Production-->
+    <add name="SQLConnection" connectionString="bPedBpqJh3yKombq0fO4wjEqx1p5YzuQuGuTUXUZbrSwHDr+U+skjSJ4RX3NeFUt7uEmwemOFgB65em2GUEz01KIND79ZsfHDxJMy84sBwzZZjSKL2Ob1FCCwdScKouaDn5eMC+KpDANU9FC37MF6RtxUKMgyCl66lIdJKUQmGY/AQpXgOqYaMiBcJXapw+xQwXgmud/26/mAiRZzrcLjr24T7ssbasE4jjYiZEeWymEJnSG+BL/poXzD5mTJ9sTSG8N+qD7bajkgcJyTPx+YyG7JscWN+Yxm4nG1o4rkWMFOnnI8OO9ZlSpYr8JcmeE"/>
+    <!-- wmpOperatorUsage Billing (Split) on wyln0-cludb02\cludb02 -->
+    <add name="SQLConnection_Billing" connectionString="bPedBpqJh3yKombq0fO4wjEqx1p5YzuQuGuTUXUZbrSwHDr+U+skjSJ4RX3NeFUt7a1mYfc2YTTwb9FIr1cs2SDlg8KdOTriuzZhz2KnoELps3dKSuJPASEPEYJBV/V60Et6QvZdgrbATDlByELEdJSdksOzulXM9P3jrndPwa4mkmzrEfAjrqDUNJdoPq9bHOzKI6HnaiXeaUijuSXlPCYw3WIeZi2ZnqpVlyYruXRgERPn9Ok4cSMdubJXes/LfKu9NKyAuXuPXJDuCfH7FTqzux8kxY0n9a3tk7remIFBFRCg/t69RSdUG3ya++16s6eaGdKvkaWGamKebAOvy3BR/Hf+h7wS1am70XxaQQCzqFBcBvOpNjMUWNhHNwan"/>
+
+    <!--DB Staging  -->
+    <add name="SQLConnection1" connectionString="bPedBpqJh3yKombq0fO4ws+o8CqtuM5R7ZVaDrjOnVRn3KepA+n19nhSjUrwRwljfsqZtTNPqxB+YyC8God64hepWXANnSr9gWC5OXb2WiTOg6lvVpnfAem8sud41Xx1KdPptaHRGVcMRyYMGvqIFgtvIcsUbkpIDAIDOB35ohNiIGxp582+eXwSHkNm8GNe1U0qvf2Wf+BuxkiPpHP5+cS/s7JMUTxE8MpT17pd4zuz54mVnUjo9L7Z7IR6GgUH"/>
+    <!--DB Backoffice  -->
+    <add name="BackOffice" connectionString="ckutO8VRr3o0Iu3epKG/XS+pmafwdtE7yL6QtMd9SuJpqGpopreuhm1adSmeuXX700VzUxzTLJyzswToSXT+l2JNOPtBxImU6Z2XIzmbwbSi4vdmsX+QGNgfXAnO0Yt9BEjr7mrCbUzp01/55mqjqAtvR0Pm6j8vFs3vvgVY0rVm042CIAgRjablFS6S77ciFHMLmnpHJzqLh96uzo86zAXA9Fp/Ulb1ISVntrI5o+4k95vuw9GFC5/QOFep/A4HleQe9A9mwBZ4II/pVpwgvFrWJGYjMvHVR5WuzU4LbFHBACp0Q57mvEVgCrBBCmhwzQhgFGejJsiP69N9AGIiSg=="/>
+
+    <add name="ITSDB" connectionString="4G5sLcJjL47adoeo9qIxRHYUHHhgaFRCrKVPwktp3hAWW/lkg5JFKy5bygHIbnbjYBhsDCGm7uJU14Huzgd9S1GF5oDbh0Q3eRsz7PJP3v5z7KvU1kY4l8NA/RPouHQhufV9mxToSvof6wC1WJ0q4Pa/oheu8Q0nANOFi5vPZTgjymJXFN8VMEqInC7icMfu2FOKzd0iqatKqZ/sd6NSt+ZIuKZYcaSK95Y5HhEHOpxfBkwE8UR3z5P30BKSA7ivb1PWOmCePYEKu1Z4Yh95HuI2oYEMGjxhTkpZzGrYE6r1BD1hwg6tHEdj6hLC7amfXqcMOdALhPbVViM4j5gIbg=="/>
+  </connectionStrings>
+  <system.web>
+    <!-- 
+            Set compilation debug="true" to insert debugging 
+            symbols into the compiled page. Because this 
+            affects performance, set this value to true only 
+            during development.
+        -->
+    <sessionState mode="InProc" />
+    <compilation debug="true">
+      <assemblies>
+        <add assembly="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+        <add assembly="System.Data.DataSetExtensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+        <add assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+        <add assembly="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+      </assemblies>
+    </compilation>
+    <!--
+            The <authentication> section enables configuration 
+            of the security authentication mode used by 
+            ASP.NET to identify an incoming user. 
+        -->
+    <authentication mode="Windows"/>
+    <!--
+            The <customErrors> section enables configuration 
+            of what to do if/when an unhandled error occurs 
+            during the execution of a request. Specifically, 
+            it enables developers to configure html error pages 
+            to be displayed in place of a error stack trace.
+
+        <customErrors mode="RemoteOnly" defaultRedirect="GenericErrorPage.htm">
+            <error statusCode="403" redirect="NoAccess.htm" />
+            <error statusCode="404" redirect="FileNotFound.htm" />
+        </customErrors>
+        -->
+    <pages>
+      <controls>
+        <add tagPrefix="asp" namespace="System.Web.UI" assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+        <add tagPrefix="asp" namespace="System.Web.UI.WebControls" assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+      </controls>
+    </pages>
+    <httpHandlers>
+      <remove verb="*" path="*.asmx"/>
+      <add verb="*" path="*.asmx" validate="false" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+      <add verb="*" path="*_AppService.axd" validate="false" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+      <add verb="GET,HEAD" path="ScriptResource.axd" type="System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" validate="false"/>
+    </httpHandlers>
+    <httpModules>
+      <add name="ScriptModule" type="System.Web.Handlers.ScriptModule, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+      <add name="ContentTypeHttpModule"  type="Porthos.Signup.Extras.ContentTypeHttpModule, ContentTypeHttpModule" />
+    </httpModules>
+  </system.web>
+  <system.codedom>
+    <compilers>
+      <compiler language="c#;cs;csharp" extension=".cs" warningLevel="4" type="Microsoft.CSharp.CSharpCodeProvider, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <providerOption name="CompilerVersion" value="v3.5"/>
+        <providerOption name="WarnAsError" value="false"/>
+      </compiler>
+    </compilers>
+  </system.codedom>
+  <!-- 
+        The system.webServer section is required for running ASP.NET AJAX under Internet
+        Information Services 7.0.  It is not necessary for previous version of IIS.
+    -->
+  <system.webServer>
+    <validation validateIntegratedModeConfiguration="false"/>
+    <modules>
+      <remove name="ScriptModule"/>
+      <add name="ScriptModule" preCondition="managedHandler" type="System.Web.Handlers.ScriptModule, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+    </modules>
+    <handlers>
+      <remove name="WebServiceHandlerFactory-Integrated"/>
+      <remove name="ScriptHandlerFactory"/>
+      <remove name="ScriptHandlerFactoryAppServices"/>
+      <remove name="ScriptResource"/>
+      <add name="ScriptHandlerFactory" verb="*" path="*.asmx" preCondition="integratedMode" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+      <add name="ScriptHandlerFactoryAppServices" verb="*" path="*_AppService.axd" preCondition="integratedMode" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+      <add name="ScriptResource" preCondition="integratedMode" verb="GET,HEAD" path="ScriptResource.axd" type="System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+    </handlers>
+  </system.webServer>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Extensions" publicKeyToken="31bf3856ad364e35"/>
+        <bindingRedirect oldVersion="1.0.0.0-1.1.0.0" newVersion="3.5.0.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Extensions.Design" publicKeyToken="31bf3856ad364e35"/>
+        <bindingRedirect oldVersion="1.0.0.0-1.1.0.0" newVersion="3.5.0.0"/>
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+  <applicationSettings>
+    <Portlets.Properties.Settings>
+      <setting name="Portlets_wsTMobileUS_TMobileWholeSale" serializeAs="String">
+        <value>https://www.wyless.net/Bulk/ProvisioningServiceTMobileUS.asmx</value>
+      </setting>
+      <setting name="Portlets_PorthosSprintWS_SprintWebService" serializeAs="String">
+        <value>https://www.wyless.net/ProvisioningServiceSprint/SprintWebService.asmx</value>
+      </setting>
+      <setting name="Portlets_PorthosWSF_PorthosWSF2" serializeAs="String">
+        <value>https://www.wyless.net/PorthosWSF25/PorthosWSF2.asmx</value>
+      </setting>
+      <setting name="Portlets_ITSService_ITSService" serializeAs="String">
+        <value>http://www.wyless.net/PorthosWServices/ITSService.asmx</value>
+      </setting>
+      <setting name="Web_PorthosAdminService_Admin" serializeAs="String">
+        <value>https://www.wyless.net/PorthosWServices/admin.asmx</value>
+      </setting>
+      <setting name="Portlets_CachingWService_ConnectionList" serializeAs="String">
+        <value>http://172.18.1.204/OptmWebServices/ConnectionList.asmx</value>
+      </setting>
+      <setting name="Common_ITSWS_ITSService" serializeAs="String">
+        <value>https://www.wyless.net/PorthosWServices/ITSService.asmx</value>
+      </setting>
+
+
+    </Portlets.Properties.Settings>
+  </applicationSettings>
+  <system.web.extensions>
+    <scripting>
+      <webServices>
+        <jsonSerialization maxJsonLength="2147483644"></jsonSerialization>
+      </webServices>
+    </scripting>
+  </system.web.extensions>
+</configuration>
